@@ -13,19 +13,6 @@ pipeline:
 
     secrets: [plugin_endpoint, plugin_token]
 
-  install_spark_resources:
-    image: banzaicloud/plugin-pipeline-client:0.3.0
-
-    deployment_name: "banzaicloud-stable/spark"
-    deployment_values:
-      historyServer:
-        enabled: true
-      spark-hs:
-        app:
-          logDirectory: "s3a://[[your-s3-bucket/your-log-folder]]"
-
-    secrets: [plugin_endpoint, plugin_token]
-
   remote_checkout:
     image: banzaicloud/drone-plugin-k8s-client:0.3.0
     original_image: plugins/git
