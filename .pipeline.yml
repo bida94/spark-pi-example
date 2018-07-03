@@ -5,6 +5,7 @@ pipeline:
     cluster_provider: "amazon"
     secrets: [plugin_endpoint, plugin_token]
 
+
   install_monitoring:
     image: banzaicloud/plugin-pipeline-client:0.3.0
     deployment_name: "banzaicloud-stable/pipeline-cluster-monitor"
