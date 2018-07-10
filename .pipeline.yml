@@ -1,7 +1,3 @@
-cluster:
-  name: "drone-kubernetes-example-google"
-  provider: "google"
-
 pipeline:
   print_env:
     image: golang:1.10-alpine
